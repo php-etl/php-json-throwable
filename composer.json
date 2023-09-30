@@ -9,19 +9,19 @@
         }
     ],
     "require": {
-        "php": "^8 || ^7.4",
+        "php": "^7.4 || ^8",
         "doctrine/instantiator": "^1.0.5",
-        "thecodingmachine/safe": "^1.1",
-        "wyrihaximus/json-utilities": "^1.2"
+        "thecodingmachine/safe": "^1.1 || ^2",
+        "wyrihaximus/json-utilities": "dev-master"
     },
     "require-dev": {
-        "wyrihaximus/test-utilities": "^3.3.1"
+        "wyrihaximus/test-utilities": "^5"
     },
-    "config": {
-        "platform": {
-            "php": "7.4.7"
-        },
-        "sort-packages": true
+    "repositories": {
+        "wyrihaximus/json-utilities": {
+            "type": "vcs",
+            "url": "git@github.com:gplanchat/php-json-utilities.git"
+        }
     },
     "autoload": {
         "psr-4": {
@@ -35,6 +35,15 @@
         "psr-4": {
             "WyriHaximus\\Tests\\": "tests/"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
+            "icanhazstring/composer-unused": true,
+            "infection/extension-installer": true
+        },
+        "sort-packages": true
     },
     "scripts": {
         "post-install-cmd": [

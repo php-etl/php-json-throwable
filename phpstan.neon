@@ -3,9 +3,10 @@ parameters:
 		- tests/*Exception.php
 		- tests/MissingAttributes.php
 	ergebnis:
-		classesAllowedToBeExtended:
-			- Exception
-			- WyriHaximus\TestUtilities\TestCase
+		noExtends:
+			classesAllowedToBeExtended:
+				- Exception
+				- WyriHaximus\TestUtilities\TestCase
 
 includes:
 	- vendor/wyrihaximus/test-utilities/rules.neon
